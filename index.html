@@ -1,0 +1,167 @@
+
+<!DOCTYPE html> 
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/141fe83e6a.js" crossorigin="anonymous"></script>
+   </head>
+<body>
+
+  <!-- Move to up bottom -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  
+  <!-- navigation menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio.</a></div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+      </ul>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Home Section Start -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hallo,</div>
+        <div class="text-two">I am Soumish</div>
+        <p id="bio"></p>
+        <div class="text-four">From Bengal, India</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <div class="about-details">
+        <div class="left">
+          <!-- <img decoding="async" src="pic4.jpg" alt="Portfolio"> -->
+          <picture>
+            <source media="(min-width:910px)" srcset="picf1.jpg">
+            <source media="(min-width:650px)" srcset="picf2.jpg" height="400">
+            <img src="picf3.jpg" alt="Portfolio" style="width:relative;">
+          </picture>
+        </div>
+        <div class="right">
+          <h1 class="topic"><span>About Me</span></h1>
+          <p >Greetings! I am Soumish Ghosh, a skilled Java developer with a strong foundation in Data Structures and Algorithms, and a familiarity with C. Additionally, I have a keen interest in Python and am constantly exploring new technologies to expand my skillset.
+
+            <br><br>As a developer, I believe in staying up-to-date with the latest industry trends and I am always on the lookout for new challenges to help me grow as a professional. I am particularly drawn to projects that allow me to use my expertise in DSA to solve complex problems.
+            
+            <br><br>When I am not busy coding, I like to unwind by playing video games like Valorant and Clash Royale. I find that gaming helps me to develop my problem-solving skills and keeps me sharp and focused.
+            
+            <br><br>I am excited to be a part of the development community and am always eager to connect with fellow professionals who share my passion for technology. Thank you for taking the time to read my profile, and I look forward to the opportunity to collaborate with you!</p>
+            
+            <div class="button">
+            <button>Download CV</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Education Section Start -->
+  <section class="education" id="education">
+    <div class="content">
+      <div class="topic"><span>My Education</span></div>
+        <div class="horizontal-scroll">
+          <div class="card">
+            <a href="http://sxs-bwn.org/" target="_blank">
+            <img src="https://sxsbwn.org/photo/sxsb.jpg" alt="St. Xavier's School, Burdwan" class="src">
+            </a>
+            <p class="name">St. Xavier's School, Burdwan</p>
+            <p class="type">Primary and Secondary Education(2009-2020)</p>
+          </div>
+          <div class="card">
+            <a href="http://bmhschool.com/" target="_blank">
+            <img src="https://dorkar.in/wp-content/uploads/2022/07/2022-01-09-372x400.jpg" alt="Burdwan Municipal High School" class="src">
+            </a>
+            <p class="name">Burdwan Municipal High School</p>
+            <p class="type">Higher Secondary Education(2020-2021)</p>
+          </div>
+          <div class="card">
+            <a href="https://www.amrita.edu/" target="_blank">
+            <img src="https://getmyuni.azureedge.net/college-image/big/amrita-school-of-engineering-ase-bangalore.jpg" alt="Amrita School of Engineering, Bangalore" class="src">
+            </a>
+            <p class="name">Amrita School of Engineering, Bangalore</p>
+            <p class="type">University(2022-present)</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  
+  <!--Skills section-->
+  <section class="skills" id="skills">
+    <div class="content">
+      <div class="topic"><span>Skills</span></div>
+        <div class="skillSet"><!--style="color: #e05855;"-->
+          <i class="fa-brands fa-java" ></i>
+          <i class="fa-brands fa-python"></i>
+          <i class="fa-brands fa-html5" ></i>
+          <i class="fa-brands fa-css3-alt"></i>        
+          <i class="fa-brands fa-js"></i>
+        </div>
+      </div>
+    </section>
+  <!-- Contact Me Section Start -->
+  <section class="contact" id="contact">
+    <div class="content">
+      <div class="row">
+        <h1 class="topic"><span>Contact Me</span></h1>
+        <div class ="contact-left">
+          <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Yor Message"></textarea>
+            <div class="button"><button type="submit" >Submit</button></div>
+          </form>
+        </div>
+        <div class="contact-right">
+          <p><i class="fa-solid fa-at"></i>&nbsp;soumish2004flamesaver@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>&nbsp;561651464</p>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/flamesaver04/?next=%2F"><i class="fa-brands fa-instagram" style="color: #f00f62;"></i></a>
+            <a href="https://www.linkedin.com/in/soumish-ghosh-63876324b/"><i class="fa-brands fa-linkedin" style="color: #1655c0;"></i></a>
+            <a href="https://github.com/Soumish2004"><i class="fa-brands fa-github" style="color: #000000;"></i></a>
+            <a href="https://discord.com/channels/770000251712569345/770000251712569348"><i class="fa-brands fa-discord" style="color:#7289da" ></i></a>
+            <a href="https://www.hackerrank.com/soumish2004flam1?hr_r=1"><i class="fa-brands fa-hackerrank" style="color: #063229;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section Start -->
+  <footer>
+    <div class="text">
+      <span>Created By <a href="#">Soumish Ghosh</a> | © 2023 All Rights Reserved.</span>
+    </div>
+  </footer>
+
+   
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
