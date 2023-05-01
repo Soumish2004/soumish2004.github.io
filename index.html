@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="iconf.png">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <!-- Fontawesome CDN Link -->
@@ -128,9 +129,9 @@
       <div class="row">
         <h1 class="topic"><span>Contact Me</span></h1>
         <div class ="contact-left">
-          <form>
+          <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <div class="button"><button type="submit" >Submit</button></div>
           </form>
@@ -160,6 +161,17 @@
    
 
   <script src="script.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzcZlCqfY67OdcDwBSyT14b7Ff57yo3QI2z4xpqaN_0QR_sgdy_qfazby-7y4PB8OVq/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>
 

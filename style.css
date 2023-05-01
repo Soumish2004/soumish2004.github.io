@@ -196,7 +196,6 @@ section .topic span{
   font-size: 30px;
   font-weight: 600;
   position:relative;
-  padding-bottom:px;
 }
 section .topic span::before,
 section .topic span::after{
