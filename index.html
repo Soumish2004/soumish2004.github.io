@@ -83,7 +83,7 @@
   <!-- My Education Section Start -->
   <section class="education" id="education">
     <div class="content">
-      <div class="topic"><span>My Education</span></div>
+      <div class="edu"><div class="topic"><span>My Education</span></div></div>
         <div class="horizontal-scroll">
           <div class="card">
             <a href="http://sxs-bwn.org/" target="_blank">
@@ -158,20 +158,33 @@
     </div>
   </footer>
 
-   
 
   <script src="script.js"></script>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzcZlCqfY67OdcDwBSyT14b7Ff57yo3QI2z4xpqaN_0QR_sgdy_qfazby-7y4PB8OVq/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJpidCz655pwmItjnOlWyq3XcJBPUx3jWlw5RnHYqcn4iltGWwKyM2FtVKHmaRElyGPg/exec'
     const form = document.forms['submit-to-google-sheet']
 
     form.addEventListener('submit', e => {
     e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
+    fetch(scriptURL, { method: 'POST', "mode": "no-cors", body: new FormData(form)})
+        .then(response => {
+            console.log('Success!', response);
+            let msg = document.getElementById("form-response");
+            msg.innerHTML = `<em>Thank You. Your response has successfully been submitted</em>`;
+            setTimeout(() => {
+                form.reset();
+            }, 1000);
+        })
+        .catch(error => { 
+            console.error('Error!', error.message)
+            let msg = document.getElementById("form-response");
+            msg.innerHTML = `${error.message}`;
+            setTimeout(() => {
+                form.reset();
+            }, 2 * 1000);
+        })
     })
-</script>
+  </script>
 </body>
 </html>
 
