@@ -136,7 +136,7 @@
             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
             <div class="button"><button type="submit" >Submit</button></div>
           </form>
-          <p id="form-response" style="color:#5083e2; align:right;"></p>
+          <p id="form-response" style="color:#5083e2; text-align:right;"></p>
         </div>
         <div class="contact-right">
           <p><i class="fa-solid fa-at"></i>&nbsp; soumish2004flamesaver@gmail.com</p>
@@ -172,7 +172,7 @@
         .then(response => {
             console.log('Success!', response);
             let msg = document.getElementById("form-response");
-            msg.innerHTML = `<em >Thank You. Your response has successfully been submitted</em>`;
+            msg.innerHTML = `<em >Thank You. Your response has been recorded</em>`;
             setTimeout(() => {
                 form.reset();
             }, 1000);
